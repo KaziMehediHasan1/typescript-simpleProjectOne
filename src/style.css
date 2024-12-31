@@ -23,12 +23,12 @@
 input {
   border-radius: 5px;
   border-color: brown;
-  padding: 7px 10px;
-  width: 200px;
+  padding: 13px 10px;
+  width: 370px;
 }
 .btn {
   border-radius: 4px;
-  padding: 7px 15px;
+  padding: 13px 20px;
   border-color: brown;
   margin-left: 6px;
 }
@@ -41,14 +41,44 @@ input {
   border-color: azure;
 }
 
-
 /* showing dynamic data */
-.data{
+.data {
   text-align: center;
   margin-top: 20px;
-  border: 1px;
+  /* border: 1px; */
   border-radius: 5px;
-  border-style: solid;
-  width: 700px;
+  /* border-style: solid; */
+  width: 900px;
   margin: 30px auto 0px;
+  padding: 0px 8px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  justify-content: space-between;
+  background-color: beige;
+  border-radius: 10px;
+  padding: 0px 7px;
+}
+
+.isCompleted {
+  width: 30px;
+  height: 20px;
+}
+.deleteBtn {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  border-color: coral;
+}
+.deleteBtn:hover {
+  border-color: rgb(205, 67, 67);
+}
+
+.textCut {
+  text-decoration: line-through;
 }
