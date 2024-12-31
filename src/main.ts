@@ -1,24 +1,23 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+interface Todo {
+  title: string;
+  isCompleted: boolean;
+  readonly id: string;
+}
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const todos: Todo[] = [];
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const todoConatainer = document.querySelector(".data") as HTMLDivElement;
+const todoInput = document.getElementsByName("title")[0] as HTMLInputElement;
+
+const myForm = document.getElementById("formelement") as HTMLFormElement;
+myForm.onsubmit = (e: SubmitEvent) => {
+  e.preventDefault();
+
+  const todo: Todo = {
+    title: todoInput.value.trim(),
+    isCompleted: false,
+    id: String(Math.random() * 100),
+  };
+  todos.push(todo);
+  console.log(todos, "4 noline");
+};

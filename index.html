@@ -1,13 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="src/style.css" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Todo App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="app">
+      <h1 class="title">Todo App</h1>
+      <form id="formelement">
+        <div class="inputsection">
+          <input
+            required
+            type="text"
+            placeholder="Enter todo name"
+            id="input"
+            name="title"
+          />
+          <button class="btn">Add</button>
+        </div>
+      </form>
+      <div class="data">show data</div>
+    </div>
+    <script type="module" src="src/main.ts"></script>
   </body>
 </html>
