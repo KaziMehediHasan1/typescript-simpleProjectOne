@@ -34,6 +34,12 @@ const generateTodoItem = (title: string, isCompleted: boolean, id: string) => {
   checkBox.className = "isCompleted";
   checkBox.checked = isCompleted;
   checkBox.onchange = () => {
+    todos.find((item) => {
+      if (item?.id === id) item.isCompleted = checkBox.checked;
+    });
+    console.log(isCompleted);
+    console.log(checkBox.checked);
+
     paragraph.className = checkBox.checked ? "textCut" : "";
   };
 
